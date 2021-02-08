@@ -1,29 +1,29 @@
-let numbers = document.querySelectorAll('.number');
-let operationsBtn = document.querySelectorAll('.operator');
-let decimalBtn = document.getElementById('decimal');
-let resultBtn = document.getElementById('result');
-let clearBtns = document.querySelectorAll('.clear-btn');
-let display = document.getElementById('display');
+const numbers = document.querySelectorAll('.number');
+const operationsBtn = document.querySelectorAll('.operator');
+const decimalBtn = document.getElementById('decimal');
+const resultBtn = document.getElementById('result');
+const clearBtns = document.querySelectorAll('.clear-btn');
+const display = document.getElementById('display');
 let MemCurrentNum = 0;
 let MemNewNum = false;
 let MemPendingOperation = '';
 
 for (let i = 0; i < numbers.length; i++) {
-    let number = numbers[i];
+    const number = numbers[i];
     number.addEventListener('click', function(e) {
         numberPress(e.target.textContent);
     });
 }
 
 for (let i = 0; i < operationsBtn.length; i++) {
-    let operationBtn = operationsBtn[i];
+    const operationBtn = operationsBtn[i];
     operationBtn.addEventListener('click', function(e) {
         operation(e.target.textContent);
     });
 }
 
 for (let i = 0; i < clearBtns.length; i++) {
-    let clearBtn = clearBtns[i];
+    const clearBtn = clearBtns[i];
     clearBtn.addEventListener('click', function(e) {
         clear(e.srcElement.id);
     });
